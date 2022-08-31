@@ -49,4 +49,6 @@
 ## GitHub
 
 - Pull requests
+	- System in which any commits/changes to a branch can be seen by others, and ultimately accpeted or rejected
 - SSH authentication to repositories
+	- Security system that allows for secrue communication and file transfer between local and remote repositories
