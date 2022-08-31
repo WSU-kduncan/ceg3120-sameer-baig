@@ -42,7 +42,9 @@
 ## git files & folders
 
 - .git folder
+	- Folder that contains all information relating to version control, like tracking and managing changes to files and code
 - .gitignore file
+	- File that tells Git to ignore when files are being commited and pushed to Github
 
 ## GitHub
 
