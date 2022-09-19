@@ -33,12 +33,13 @@ async def on_message(message):
         return
 
     hitchhiker_quotes = [
-        'There is an art, it says, or rather, a knack to flying. The knack lies in learning how to throw yourself at the ground and miss.',
-        'It is a mistake to think you can solve any major problems just with potatoes.',
-        'In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.',
-        'A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.',
+        'The Cleveland Cavaliers currently have 4 All-Stars on their roster.',
+        'It has been reported by Brian Windhorst that Donovan Mitchell is excited with the prospect of playing with Darius Garland.',
+        'There is still room for improvement if the Cavs do not sign or trade for a 3&D wing.',
+        'The Cleveland Cavaliers still have one more roster spot left, as it is knwon that they are trying out a few players.',
+        'Ricky Rubio had so much faith in the Cavaliers, that he resigned on a smaller contract after being traded.',
     ]
-    if message.content == 'towel!':
+    if message.content == 'Cavs':
     #if message.content.startswith('$towel'):
         response = random.choice(hitchhiker_quotes)
         await message.channel.send(response)
