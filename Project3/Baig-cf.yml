@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  This is a CLoudFormation template made by Sameer Baig to create a VPC to allow SSH access from trsuted netwowrks.
+  This is a CloudFormation template made by Sameer Baig to create a VPC to allow SSH access from trsuted netwowrks.
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
