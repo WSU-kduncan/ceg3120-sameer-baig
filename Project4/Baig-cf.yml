@@ -185,8 +185,11 @@ Resources:
             #!/bin/bash -xe
             apt-get update && \
             # TODO need to install haproxy
-            apt-get install haproxy && \
-            apt-get install -y git python3 python3-pip && \
+            apt-get install -y \
+              git \
+              python3 \
+              python3-pip \
+              haproxy && \
             hostnamectl set-hostname proxy && \
             reboot
   WebServ1Instance:
@@ -221,20 +224,21 @@ Resources:
             #!/bin/bash -xe
             apt-get update && \
             # TODO need to install apache or nginx
-            apt-get install apache2 && \
-            apt-get install -y git && \
+            apt-get install -y \
+              git \
+              apache2 && \
             hostnamectl set-hostname ServerOne && \
             # TODO give it a hostname - hostnamectl  && \
             reboot
-    WebServ2Instance:
-      Type: 'AWS::EC2::Instance'
-      DependsOn: NATGateway
-      Properties:
-         ImageId: !FindInMap
-         - AWSRegionUbuntu
-            - !Ref 'AWS::Region'
+  WebServ2Instance:
+    Type: 'AWS::EC2::Instance'
+    DependsOn: NATGateway
+    Properties:
+      ImageId: !FindInMap
+        - AWSRegionUbuntu
+        - !Ref 'AWS::Region'
         - !FindInMap
-          - AWSINstanceType2Arch
+          - AWSInstanceType2Arch
           - t2.micro
           - Arch
       InstanceType: t2.micro
@@ -256,8 +260,9 @@ Resources:
         Fn::Base64:
           !Sub |
             apt-get update && \
-            apt-get install apache2 && \
-            apt-get install -y git && \
+            apt-get install -y \
+              git \
+              apache2 && \
             hostnamectl set-hostname ServerTwo && \
             reboot
 # TODO: create another webserver instance attached to the private subnet
